@@ -14,14 +14,17 @@ def OddLst(n,m):
     lst=[]
     while n < m:
         lst.append(n)
-        return lst
+        n +=2
+    return lst
 
-a=10000000
+a=10000
 
 t1 =time.time()
-sum(OddGen(1,a))
+sn = sum(OddGen(1,a))
+print(sn)
 print("Time to sum OddGen: %f" %(time.time() -t1))
 
 t1 =time.time()
-sum(OddLst(1,a))
+sn = sum(OddLst(1,a))
+print(sn)
 print("Time to sum Lst: %f" %(time.time() -t1))
